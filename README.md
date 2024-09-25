@@ -1,1 +1,1 @@
-This is an frontend for eccoemerce website
+This is an frontend for eccomerce website
