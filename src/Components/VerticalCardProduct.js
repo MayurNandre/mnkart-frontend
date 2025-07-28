@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
-import fetchCategoryWiseProduct from '../helper/fetchCategoryWiseProduct'
-import displayINRCurrency from '../helper/displayCurrency'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6'
-import addToCart from '../helper/addToCart'
 import { Link } from 'react-router-dom'
 import context from '../context'
+import addToCart from '../helper/addToCart'
+import displayINRCurrency from '../helper/displayCurrency'
+import fetchCategoryWiseProduct from '../helper/fetchCategoryWiseProduct'
 
 const VerticalCardProduct = ({ category, heading }) => {
 

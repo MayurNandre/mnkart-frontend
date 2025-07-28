@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
-import fetchCategoryWiseProduct from '../helper/fetchCategoryWiseProduct'
-import displayINRCurrency from '../helper/displayCurrency'
-import addToCart from '../helper/addToCart'
+import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import context from '../context'
+import addToCart from '../helper/addToCart'
+import displayINRCurrency from '../helper/displayCurrency'
+import fetchCategoryWiseProduct from '../helper/fetchCategoryWiseProduct'
 import scrollToTop from '../helper/scrollToTop'
 
 const CategoryWiseProductDisplay = ({ category, heading }) => {
