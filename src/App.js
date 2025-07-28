@@ -42,7 +42,7 @@ const fetchCountCartItems = async()=>{
     fetchUserDetails()
     /* Counting cart items */
     fetchCountCartItems()
-  }, [])
+  }, )
 
   return (
     <>
@@ -55,7 +55,7 @@ const fetchCountCartItems = async()=>{
 
         <ToastContainer  position="bottom-left" theme="dark" autoClose={3500}/>
         <Header />
-        <main className='min-h-[calc(100vh-120px)] pt-16'>
+        <main className='min-h-[calc(100vh-100px)] pt-16'>
           <Outlet />
         </main>
         <Footer />
