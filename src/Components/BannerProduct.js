@@ -89,12 +89,12 @@ const BannerProduct = () => {
                 {/* Desktop and tablet version end*/}
 
                 {/*  Mobile  version */}
-                {/* <div className='absolute z-10 w-full h-full flex items-center md:hidden'>
+                <div className='absolute z-10 w-full h-full flex items-center md:hidden'>
                     <div className='flex justify-between w-full text-2xl'>
                         <button onClick={prevImage} className='bg-white shadow-md rounded-full p-1'><FaAngleLeft /></button>
                         <button onClick={nextImage} className='bg-white shadow-md rounded-full p-1'><FaAngleRight /></button>
                     </div>
-                </div> */}
+                </div>
                 <div className='flex h-full w-full overflow-hidden md:hidden'>
                     {
                         mobileTopImages.map((imgurl, index) => {

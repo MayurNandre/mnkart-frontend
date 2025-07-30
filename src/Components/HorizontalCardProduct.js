@@ -50,7 +50,7 @@ const HorizontalCardProduct = ({ category, heading }) => {
 
             <h2 className='capitalize text-2xl font-semibold py-4'>{heading}</h2>
 
-            <div ref={scrollElement} className='transition-all flex items-center gap-6 overflow-scroll scrollbar-none'>
+            <div ref={scrollElement} className='transition-all flex items-center gap-6 overflow-x-scroll scrollbar-none'>
 
                 <button className='bg-white shadow-md rounded-full p-1 absolute left-0 text-lg hidden md:block' onClick={scrollLeft}><FaAngleLeft /></button>
 
@@ -78,18 +78,18 @@ const HorizontalCardProduct = ({ category, heading }) => {
                     ) : (
                         data.map((product, index) => {
                             return (
-                                <Link to={"/product/" + product?._id} className='w-full min-w-[280px] md:min-w-[320px] max-w-[280px] md:max-w-[320px] h-36 bg-white rounded-sm shadow flex' key={index}>
-                                    <div className='bg-slate-200 h-full p-4 min-w-[120px] md:min-w-[145px] '>
+                                <Link to={"/product/" + product?._id} className=' bg-white rounded-sm shadow flex' key={index}>
+                                    <div className='bg-slate-200 h-full p-4 min-w-[175px] md:min-w-[175px] '>
                                         <img src={product?.productImage[0]} alt="" className='object-scale-down h-full hover:scale-110 transition-all mix-blend-multiply' />
                                     </div>
-                                    <div className='p-4 grid'>
+                                    <div className='p-4 grid '>
                                         <h2 className='font-medium text-base md:text-lg text-ellipsis line-clamp-1 text-black'>{product?.productName}</h2>
                                         <p className='capitalize text-slate-500'>{product?.category}</p>
                                         <div className='flex gap-3'>
                                             <p className='text-red-600 font-medium'>{displayINRCurrency(product?.sellingPrice)}</p>
                                             <p className='text-slate-500 line-through'>{displayINRCurrency(product?.price)}</p>
                                         </div>
-                                        <button className='text-sm bg-red-600 hover:bg-red-700 text-white rounded-full px-2 py-0.5' onClick={(e) => handleAddToCart(e, product?._id)}>Add to Cart</button>
+                                        <button className='text-sm bg-red-600 hover:bg-red-700 text-white rounded-full px-2 mt-2 py-0' onClick={(e) => handleAddToCart(e, product?._id)}>Add to Cart</button>
                                     </div>
                                 </Link>
                             )
